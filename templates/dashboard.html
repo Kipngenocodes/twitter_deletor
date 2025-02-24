@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>Welcome, {{ user.name }} (@{{ user.screen_name }})</h1>
+    <a href="{{ url_for('logout') }}">Logout</a>
+    <h2>Your Tweets</h2>
+    {% if tweets %}
+        <ul>
+        {% for tweet in tweets %}
+            <li>
+                <p>{{ tweet.full_text }}</p>
+                <form action="{{ url_for('delete_tweet', tweet_id=tweet.id) }}" method="POST">
+                    <button type="submit">Delete</button>
+                </form>
+            </li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No tweets found.</p>
+    {% endif %}
+</body>
+</html>
