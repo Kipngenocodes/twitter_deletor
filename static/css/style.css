@@ -1,0 +1,51 @@
+/* Custom styling for the Twitter Manager */
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f9fa;
+}
+
+.container {
+    flex: 1;
+}
+
+/* Tweet list styling */
+.list-group-item {
+    border-left: none;
+    border-right: none;
+    padding: 1rem;
+    background-color: #fff;
+    transition: background-color 0.2s;
+}
+
+.list-group-item:hover {
+    background-color: #f8f9fa;
+}
+
+/* Button styling */
+.btn-twitter {
+    background-color: #1DA1F2;
+    color: white;
+}
+
+.btn-twitter:hover {
+    background-color: #0c85d0;
+    color: white;
+}
+
+/* Tweet form */
+textarea {
+    resize: vertical;
+}
+
+/* Navbar styling */
+.navbar-brand {
+    font-weight: bold;
+}
+
+/* Footer styling */
+footer {
+    margin-top: auto;
+}
